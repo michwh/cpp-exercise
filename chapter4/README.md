@@ -8,3 +8,5 @@ main ()
     cout<<m<<endl; 
 }
 ```
+
+[在Code::Blocks中使用C++11标准](https://blog.csdn.net/NoMasp/article/details/45920333)
