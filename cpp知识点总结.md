@@ -1,3 +1,72 @@
+# 第四章
+
+## 字符串
+
+cin使用空格、制表符或换行符来确定字符串的结尾位置，可以使用getline()来解决此类问题。
+
+`cin.getline()`有两个参数，第一个用来存储输入的数组名称，第二个要读取的字符数。
+
+`cin.get()`参数与getline相同，不过它会把换行符也读进去。get()可以没有参数
+
+## string类
+
+```cpp
+#include<string>
+using namespace std;
+
+//赋值
+string str = "mmmmm";
+
+//合并
+string str3 = str2 + str1;
+```
+
+## 结构体
+
+![2](imgs/2.png)
+
+## 枚举（enum）
+
+![3](imgs/3.png)
+
+## 指针和自由存储空间
+
+![4](imgs/4.png)
+
+![5](imgs/5.png)
+
+new和delete要配对
+
+![6](imgs/6.png)
+
+new完返回的是指针类型
+
+使用new创建动态结构体对象。访问结构体成员应该用“->”而不是“.”。只要是通过指针访问的结构体对象成员（类对象成员也一样），用一根针“->”.
+
+# 第五章
+
+## strcmp()
+
+```cpp
+#include <cstring>
+
+using namespace std;
+```
+
+功能：比较字符串s1和s2。
+
+一般形式：`strcmp(字符串1，字符串2)`
+
+字符串1和字符串2是放在字符数组里的（char[]）
+
+返回值：
+
+当s1<s2时，返回值<0
+
+当s1=s2时，返回值=0
+
+当s1>s2时，返回值>0
+
 # 第八章
 
 ## 函数重载
@@ -84,3 +153,30 @@ istream& getline (char* s, streamsize n, char delim );
 ```
 
 作用是： 从iostream中读取至多n个字符(包含结束标记符)保存在s对应的数组中。即使还没读够n个字符，如果遇到delim或 字数达到限制，则读取终止，delim都不会被保存进s对应的数组中。
+
+# 第十章
+
+## 补充
+
+### 头文件 string.h cstring string 区别
+
+```cpp
+#include <cstring>   //不可以定义string s；可以用到strcpy等函数
+using   namespace   std;
+
+#include <string>   //可以定义string s；可以用到strcpy等函数
+using  namesapce   std;
+
+#include <string.h>   //不可以定义string s；可以用到strcpy等函数
+```
+
+### #ifdef 和 #ifndef 
+
+```
+#ifdef identifier  
+#ifndef identifier  
+  
+// equivalent to  
+#if defined identifier  
+#if !defined identifier  
+```
